@@ -1,4 +1,3 @@
-//https://github.com/JsonLucas/projeto-minihack-weather.git
 const apiKey = 'b8e122626fb7493a9e98863509c239de';
 const locationData = {
 	cep: '',
@@ -49,7 +48,6 @@ function getLocation(){
 			break;
 		}
 	}
-	console.log(locationData.cep);
 	if(locationData.country === 'brasil'){
 		locationData.country = 'BR';
 	}
@@ -63,7 +61,6 @@ function getCoordinates(locationData){
 		const data = response.data;
 		locationData.lat = data.lat;
 		locationData.lon = data.lon;
-		console.log(data);
 		const confirmUseLocation = confirm('deseja que sua localização seja usada para mostrar o clima?');
 		useLocation(confirmUseLocation);
 	}).catch((error) => { console.log(error) });
@@ -81,7 +78,6 @@ function getWeather(){
 	const request = axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${locationData.lat}
 		&lon=${locationData.lon}&appid=${apiKey}`);
 	request.then((response) => {
-		console.log(response.data);
 		renderWeatherData(response.data);
 	}).catch((error) => { console.log(error); });
 }
