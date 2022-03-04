@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+@media screen and (max-width: 1000px){
+	.container{
+		width: 80%;
+	}
+	.fields, .btn{
+		margin-top: 5%;
+	}
+}
+@media screen and (min-width: 1001px){
+	.container{
+		width: 50%;
+	}
+	.fields, .btn{
+		margin-top: 2.5%;
+	}
+}
+.main{
+	position:  absolute;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	margin: auto;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+}
+.card-enter-location, .inputs, .fields, .btn > input, .main-information{
+	width: 100%;
+}
+.btn > input {
+	cursor: pointer;
+}
+.fields > input {
+	width:  96.1%;
+}
+.fields > input, .btn > input{
+	padding: 2%;
+	border: none;
+}
+.main-information > div > label{
+	font-weight: bolder;
+}

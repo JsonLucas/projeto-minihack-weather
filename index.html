@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+	<head>
+		<meta charset='UTF-8'>
+		<link rel='stylesheet' href='css/style.css'>
+		<link rel='shortcut icon' href='http://openweathermap.org/img/wn/10d@2x.png' id='shortcut-icon'>
+		<title>Weather Now</title>
+	</head>
+	<body onload='renderInitialCard();'>
+		<main class='main'>
+			<section class='section-enter-location'>
+				<div class='container'>
+					<div class='card-enter-location'>
+						<div class='inputs'>
+							<div class='fields'>
+								<input type='text' placeholder='Digite o cep da sua cidade.'>
+							</div>
+							<div class='fields'>
+								<input type='text' placeholder='Digite o país que se localiza.'>
+							</div>
+							<div class='btn'>
+								<input type='button' value='Procurar. . .' onclick='getLocation()'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src='js/events.js'></script>
+	</body>
+</html>
